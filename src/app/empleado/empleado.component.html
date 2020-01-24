@@ -1,0 +1,16 @@
+<h2>{{header}}</h2>
+<button class="btn btn-primary" (click)="buscarEmpleado()" >Cargar</button>
+&nbsp;
+<button class="btn btn-secondary" (click)="borrar()">Borar</button>
+<table class="table">
+    <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>Sueldo</th>
+    </tr>
+    <tr *ngFor="let emp of respuesta.data">
+        <td>{{emp.id}}</td>
+        <td>{{emp.employee_name | lowercase }}</td>
+        <td>{{emp.employee_salary | currency}}</td>
+    </tr>
+</table>
